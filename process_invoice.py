@@ -52,12 +52,12 @@ def _resolve_extracted_path(arg_path: str) -> str:
     # Otherwise try to find an extracted example matching the basename
     base = p.stem
     candidates = list((Path(__file__).parent / "extracted_examples").glob("**/*"))
-    # also include `data/mock_extention` for example extracted inputs
-    candidates += list((Path(__file__).resolve().parent / "data" / "mock_extention").glob("**/*"))
+    # also include `data/mock_extraction` for example extracted inputs
+    candidates += list((Path(__file__).resolve().parent / "data" / "mock_extraction").glob("**/*"))
     # Exact match variant: base_extracted.json (search both locations)
     preferred = Path(__file__).parent / "extracted_examples" / f"{base}_extracted.json"
     if not preferred.exists():
-        preferred = Path(__file__).resolve().parent / "data" / "mock_extention" / f"{base}_extracted.json"
+        preferred = Path(__file__).resolve().parent / "data" / "mock_extraction" / f"{base}_extracted.json"
     if preferred.exists():
         return str(preferred)
 
@@ -147,7 +147,12 @@ def main(input_path: str, po_db_path: str):
 
 if __name__ == "__main__":
 
-    if len(sys.argv) < 3:
-        print("Usage: python process_invoice.py <extracted_invoice.json> <purchase_orders.json>")
+    # Allow a convenient single-argument usage for demos/tests:
+    # python process_invoice.py <extracted_invoice.json>
+    # will use the default PO DB at data/database/purchase_orders.json
+    if len(sys.argv) < 2:
+        print("Usage: python process_invoice.py <extracted_invoice.json> [purchase_orders.json]")
         sys.exit(1)
-    main(sys.argv[1], sys.argv[2])
+    extracted_arg = sys.argv[1]
+    po_db_arg = sys.argv[2] if len(sys.argv) > 2 else str(Path(__file__).resolve().parent / "data" / "database" / "purchase_orders.json")
+    main(extracted_arg, po_db_arg)
