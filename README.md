@@ -78,7 +78,7 @@ pip install -r requirements.txt
 Process a sample extracted invoice via the provided entry point:
 
 ```bash
-python process_invoice.py data/mock_extention/invoice_5_extracted.json
+python process_invoice.py data/mock_extraction/invoice_5_extracted.json
 ```
 
 This will run the orchestration pipeline using the sample PO database under `data/database/purchase_orders.json` and print a short summary. Use the `--report` flag to generate an HTML report output.
@@ -135,7 +135,7 @@ Agents update a shared `AgentState` and append `AgentMessage` objects describing
 ### Data model
 
 - Purchase Orders (PO) — stored as JSON under `data/database/purchase_orders.json`. The test helper reads the `purchase_orders` key or the entire file if it is an array.
-- Extracted invoices — JSON files in `data/mock_extention/` representing already-extracted invoice fields (line items, unit prices, invoice metadata).
+- Extracted invoices — JSON files in `data/mock_extraction/` representing already-extracted invoice fields (line items, unit prices, invoice metadata).
 
 Key fields the pipeline uses:
 - `line_items`: list of {description, quantity, unit_price, line_total}

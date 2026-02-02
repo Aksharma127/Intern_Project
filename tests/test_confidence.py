@@ -15,7 +15,7 @@ def load_po_db():
 def test_overlap_penalty_and_message():
     # Arrange: load PO DB and invoice 5 (missing PO)
     po_db = load_po_db()
-    extracted = json.loads(open(ROOT / "data" / "mock_extention" / "invoice_5_extracted.json").read())
+    extracted = json.loads(open(ROOT / "data" / "mock_extraction" / "invoice_5_extracted.json").read())
 
     orch = Orchestrator(po_db)
 

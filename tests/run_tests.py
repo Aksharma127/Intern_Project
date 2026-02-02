@@ -26,7 +26,7 @@ def run_all(report: bool = False, report_dir: str = None):
     # reproduce the test scenario inputs (use repository data paths)
     ROOT = Path(__file__).resolve().parent.parent
     po_db = json.load(open(ROOT / "data" / "database" / "purchase_orders.json", "r"))
-    extracted = json.loads(open(ROOT / "data" / "mock_extention" / "invoice_5_extracted.json").read())
+    extracted = json.loads(open(ROOT / "data" / "mock_extraction" / "invoice_5_extracted.json").read())
 
     orch = Orchestrator(po_db)
     # generate a processing result to visualize
