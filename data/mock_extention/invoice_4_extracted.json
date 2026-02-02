@@ -1,0 +1,23 @@
+{
+  "invoice_number": "INV-2024-004",
+  "invoice_date": "2024-01-18",
+  "supplier": "Global Pharma Supply Co.",
+  "po_reference": null,
+  "currency": "GBP",
+  "extraction_confidence": 0.95,
+  "document_quality": "good",
+  "line_items": [
+    {
+      "description": "Ibuprofen BP 200mg",
+      "item_code": "GPS-A101",
+      "quantity": 100,
+      "unit": "kg",
+      "unit_price": 88.00,
+      "line_total": 8800.00,
+      "extraction_confidence": 0.98
+    }
+  ],
+  "subtotal": 8800.00,
+  "vat": 1760.00,
+  "total": 10560.00
+}

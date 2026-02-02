@@ -1,0 +1,32 @@
+{
+  "invoice_number": "INV-2024-005",
+  "invoice_date": "2024-01-20",
+  "supplier": "EuroChem Trading",
+  "po_reference": null,
+  "currency": "GBP",
+  "extraction_confidence": 0.92,
+  "document_quality": "acceptable",
+  "line_items": [
+    {
+      "description": "Mannitol Granular USP",
+      "quantity": 120,
+      "unit_price": 14.50
+    },
+    {
+      "description": "Talc Pharma Grade",
+      "quantity": 60,
+      "unit_price": 8.80
+    },
+    {
+      "description": "Colloidal Silicon Dioxide",
+      "quantity": 25,
+      "unit_price": 35.00
+    },
+    {
+      "description": "Hypromellose 2910",
+      "quantity": 80,
+      "unit_price": 18.75
+    }
+  ],
+  "discrepancies": []
+}

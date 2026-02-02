@@ -1,0 +1,10 @@
+# Core Utilities
+colorama>=0.4.6       # For the Agent UI colors (Cross-platform compatibility)
+pydantic>=2.5.0       # Data validation (Standard for Agentic systems)
+
+# PDF Processing (If you implemented actual extraction)
+PyPDF2>=3.0.0
+
+# Testing
+pytest>=7.4.0         # For running the test suite
+mock>=5.1.0           # For unit test mocking
